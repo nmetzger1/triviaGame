@@ -7,6 +7,16 @@ body{
     margin: 5%;
     background-image: url("../images/background1.png");
     border: solid 2px darkblue;
+    position: relative;
+}
+
+#pause{
+    font-size: xx-large;
+    color: black;
+    text-align: right;
+    position: absolute;
+    top: 1%;
+    right: 1%;
 }
 
 .titlebar{
@@ -21,13 +31,14 @@ body{
 }
 
 .question-image{
-    background-color: forestgreen;
+    background-color: red;
     border: solid 1px black;
-    padding: 3%;
+    padding: 0;
 }
 
-.img{
-    max-height: 200px;
+.big-image{
+    margin: 1%;
+    max-width: 98%;
 }
 
 .question-area{
@@ -52,6 +63,10 @@ body{
     margin: 2%;
     font-size: large;
     font-family: "Arial Black", sans-serif;
+}
+
+#correct-answer{
+    opacity: 1.0;
 }
 
 .timer{
