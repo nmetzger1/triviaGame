@@ -21,7 +21,7 @@ var q2 = {
     wrong1: "3,012",
     wrong2: "4,821",
     wrong3: "6,120",
-    image: "assets/images/tajmahal.png",
+    image: "assets/images/tajMahal.png",
     picked: false
 };
 
@@ -390,7 +390,7 @@ var game = {
 
         if(game.timer <= 0){
             game.stopTimer();
-            insertImage("assets/images/instructions.gif");
+            insertImage("assets/images/timeout.gif");
             game.showAnswer();
             game.wrongAnswers++;
         }
