@@ -11,7 +11,7 @@ var q1 = {
     wrong1: "1954",
     wrong2: "1967",
     wrong3: "1945",
-    image: "assets/images/ogLego.png",
+    image: "assets/images/originallego.png",
     picked: false
 };
 
@@ -21,7 +21,7 @@ var q2 = {
     wrong1: "3,012",
     wrong2: "4,821",
     wrong3: "6,120",
-    image: "assets/images/tajMahal.png",
+    image: "assets/images/tajmahal.png",
     picked: false
 };
 
@@ -31,7 +31,7 @@ var q3 = {
     wrong1: "Copenhagen, Denmark",
     wrong2: "Oslo, Norway",
     wrong3: "Bergen, Norway",
-    image: "assets/images/.png",
+    image: "assets/images/legohq.png",
     picked: false
 };
 
@@ -41,7 +41,7 @@ var q4 = {
     wrong1: "Plastic Brick",
     wrong2: "Foot Pain",
     wrong3: "Many Colors",
-    image: "assets/images/bricks.png",
+    image: "assets/images/logo.png",
     picked: false
 };
 
@@ -51,7 +51,7 @@ var q5 = {
     wrong1: "1977",
     wrong2: "1984",
     wrong3: "2003",
-    image: "assets/images/.png",
+    image: "assets/images/starwars.png",
     picked: false
 };
 
@@ -61,7 +61,7 @@ var q6 = {
     wrong1: "95",
     wrong2: "160",
     wrong3: "134",
-    image: "assets/images/.png",
+    image: "assets/images/bricks.png",
     picked: false
 };
 
@@ -71,7 +71,7 @@ var q7 = {
     wrong1: "Bob",
     wrong2: "Benny",
     wrong3: "Luke",
-    image: "assets/images/.png",
+    image: "assets/images/emmet.png",
     picked: false
 };
 
@@ -91,7 +91,7 @@ var q9 = {
     wrong1: "Wild West",
     wrong2: "Pirates",
     wrong3: "Space",
-    image: "assets/images/.png",
+    image: "assets/images/castle.png",
     picked: false
 };
 
@@ -101,7 +101,7 @@ var q10 = {
     wrong1: "Pancake Printer",
     wrong2: "Rubik's Cube Solver",
     wrong3: "Automatic Toilet Flusher",
-    image: "assets/images/.png",
+    image: "assets/images/mindstorms.png",
     picked: false
 };
 
@@ -111,7 +111,7 @@ var q11 = {
     wrong1: "1996",
     wrong2: "1985",
     wrong3: "2001",
-    image: "assets/images/.png",
+    image: "assets/images/legoland.png",
     picked: false
 };
 
@@ -121,7 +121,7 @@ var q12 = {
     wrong1: "Action Figure",
     wrong2: "Brick Person",
     wrong3: "Lego Figurine",
-    image: "assets/images/.png",
+    image: "assets/images/minifigs.png",
     picked: false
 };
 
@@ -131,7 +131,7 @@ var q13 = {
     wrong1: "Plastic",
     wrong2: "Plaster",
     wrong3: "Asbestos",
-    image: "assets/images/.png",
+    image: "assets/images/bindingbricks.png",
     picked: false
 };
 
@@ -141,7 +141,7 @@ var q14 = {
     wrong1: "$399",
     wrong2: "$449",
     wrong3: "$349",
-    image: "assets/images/.png",
+    image: "assets/images/falcon.png",
     picked: false
 };
 
@@ -151,7 +151,7 @@ var q15 = {
     wrong1: "Disney Princesses",
     wrong2: "Harry Potter",
     wrong3: "Indiana Jones",
-    image: "assets/images/.png",
+    image: "assets/images/licensed.png",
     picked: false
 };
 
@@ -161,7 +161,7 @@ var q16 = {
     wrong1: "1932",
     wrong2: "1960",
     wrong3: "1955",
-    image: "assets/images/.png",
+    image: "assets/images/bricks.png",
     picked: false
 };
 
@@ -171,7 +171,7 @@ var q17 = {
     wrong1: "0",
     wrong2: "110",
     wrong3: "64",
-    image: "assets/images/.png",
+    image: "assets/images/bricks.png",
     picked: false
 };
 
@@ -181,7 +181,7 @@ var q18 = {
     wrong1: "Lego Jr.",
     wrong2: "Lil Lego",
     wrong3: "Fabuland",
-    image: "assets/images/.png",
+    image: "assets/images/duplo.png",
     picked: false
 };
 
@@ -191,7 +191,7 @@ var q19 = {
     wrong1: "2015",
     wrong2: "2013",
     wrong3: "2012",
-    image: "assets/images/.png",
+    image: "assets/images/legomovie.png",
     picked: false
 };
 
@@ -201,7 +201,7 @@ var q20 = {
     wrong1: "Christian Bale",
     wrong2: "Chris Pratt",
     wrong3: "Adam West",
-    image: "assets/images/.png",
+    image: "assets/images/batman.png",
     picked: false
 };
 
@@ -291,7 +291,7 @@ var game = {
 
     endGame: function() {
         //Show Game Over Text
-        $('.question-area').html('<img src="assets/images/gameOver.png">');
+        $('.question-area').html('<img src="assets/images/gameover.png" class="big-image">');
         //Show Scoreboard
         $('.answer-area').empty().append('<h2>Correct: ' + game.correctAnswers + '</h2><h2>Wrong: ' +  game.wrongAnswers + '</h2>');
         //Shore Restart Game Button
