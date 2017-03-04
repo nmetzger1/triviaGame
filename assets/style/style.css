@@ -59,6 +59,26 @@ body{
     border: solid 1px black;
 }
 
+.brick-button{
+    background: url('../images/button.png') no-repeat top left;
+    width: 230px;
+    color: white;
+    height: 60px;
+    text-align: center;
+    padding-top: 2.5%;
+    border: none;
+    margin: 1% 2%;
+    font-size: 1.25em;
+}
+
+.brick-button:hover{
+    opacity: .7;
+}
+
+#wrong-answer{
+    opacity: .5;
+}
+
 .btn-lg{
     width: 45%;
     margin: 1% 2%;
@@ -77,4 +97,12 @@ body{
 
 .progress{
     margin: 1%;
+}
+
+@media screen and (max-width: 640px){
+    #pause{
+        position: static;
+        text-align: center;
+        margin: 1%;
+    }
 }

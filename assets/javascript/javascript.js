@@ -224,18 +224,20 @@ var game = {
     wrongAnswers: 0,
     correctAnswers: 0,
     questionCounter: 0,
-    timer: 150,
+    timer: 135,
     timerMax: 135,
     currentQuestion: {},
 
     readyGame: function()
     {
         //Start Music
-        this.startMusic();
+        this.stopMusic();
+        //this.startMusic();
         //Show Welcome Image
         insertImage("assets/images/bricks.png");
         //Show Instructions
-        $('.answer-area').html('<btn class="btn btn-primary btn-lg" id="gameStart">Press To Play</btn>');
+        //$('.answer-area').html('<btn class="btn btn-primary btn-lg" id="gameStart">Press To Play</btn>');
+        $('.answer-area').html('<input type="submit" class="brick-button" id="gameStart" value="Press To Play">');
         //clear Question / Timer
         $('.question-area').empty();
         $('.timer').empty();
@@ -271,8 +273,8 @@ var game = {
         game.startTimer();
 
         //Get User Input
-        $('.btn-lg').on("click", function (btn) {
-            userAnswer = btn.target.textContent;
+        $('.brick-button').on("click", function (btn) {
+            userAnswer = btn.target.value;
 
             //Determine if Correct
             if (userAnswer === game.currentQuestion.right) {
@@ -300,7 +302,8 @@ var game = {
         //Show Scoreboard
         $('.answer-area').empty().append('<h2>Correct: ' + game.correctAnswers + '</h2><h2>Wrong: ' +  game.wrongAnswers + '</h2>');
         //Shore Restart Game Button
-        $('.answer-area').append('<btn class="btn btn-lg btn-primary" id="restart">Restart Game</btn>');
+        //$('.answer-area').append('<btn class="btn btn-lg btn-primary" id="restart">Restart Game</btn>');
+        $('.answer-area').append('<input type="submit" class="brick-button" id="restart" value="Restart Game">');
 
         if(game.correctAnswers < 4){
             insertImage("assets/images/fail.gif");
@@ -365,9 +368,12 @@ var game = {
             buttonId = $("#answer" + i);
 
             //find button with correct answer and adds ID
-            if(buttonId.text() === game.currentQuestion.right){
+            if(buttonId.val() === game.currentQuestion.right){
                 buttonId.addClass("active");
                 buttonId.attr("id", "correct-answer");
+            }
+            else {
+                buttonId.attr("id", "wrong-answer");
             }
 
             //disables clicking button while waiting for new question
@@ -426,7 +432,8 @@ var game = {
         answerArray = shuffleArray(answerArray);
 
         for(var i in answerArray){
-            $(".answer-area").append('<button class="btn btn-primary btn-lg" id="answer' + i + '">' + answerArray[i] +'</button>');
+            //$(".answer-area").append('<button class="btn btn-primary btn-lg" id="answer' + i + '">' + answerArray[i] +'</button>');
+            $(".answer-area").append('<input type="submit" class="brick-button" id="answer' + i + '" value="' + answerArray[i] + '">');
         }
     }
 
